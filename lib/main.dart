@@ -166,7 +166,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   const ProgressBar(),
                   const Spacer(),
-                  const CardCarousel(),
+                  const CardCarousel(
+                    noOfCards: 10,
+                  ),
                   const CardIntroduction(),
                   const SizedBox(
                     height: 20,

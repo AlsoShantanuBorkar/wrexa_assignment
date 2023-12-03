@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:wrexa_assignment/widgets/showcase_card.dart';
 
 class CardCarousel extends StatelessWidget {
-  const CardCarousel({super.key});
-
+  const CardCarousel({super.key, required this.noOfCards});
+  final int noOfCards;
   @override
   Widget build(BuildContext context) {
     Set<int> randomList = {};
     math.Random random = math.Random();
-    while (randomList.length < 10) {
-      int randomNo = random.nextInt(10);
+    while (randomList.length < noOfCards) {
+      int randomNo = random.nextInt(noOfCards);
       if (!randomList.contains(randomNo)) {
         randomList.add(randomNo);
       }
